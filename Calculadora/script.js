@@ -45,13 +45,12 @@ Object.keys(idToOperadores).forEach(id => {
     operadorSelecionado = idToOperadores[id];
 
     numero2 = numero;
-document.getElementById("resutado4").innerText = numero2 ;
+//document.getElementById("resutado4").innerText = numero2 ;
 
     console.log('Resultado:', numero2);
    let resutadoConta=numero2;
    document.getElementById("resutado").innerText = resutadoConta;
     numero3 = numero2;
-    alert("o valor de numero" + numero3);
     numero = 0;
     cliques = 0;
     base = 0;
@@ -61,25 +60,20 @@ document.getElementById("resutado4").innerText = numero2 ;
 });
 
 // -------- BOTÃO DE RESULTADO (ex: "=") --------
- 
 const igual = document.getElementById("igual");
 
 if (igual) {
   igual.addEventListener('click', () => {
-
-    if (operadorSelecionado === "+") {
-     
+    if (operadorSelecionado === "+") {    
       numero2 += numero;
-    } else if (operadorSelecionado === "-") {
-      
+    } else if (operadorSelecionado === "-") {     
       numero2 -= numero;
-    } else if (operadorSelecionado === "*") {
-       
+    } else if (operadorSelecionado === "*") {      
       numero2 *= numero;
-    } else if (operadorSelecionado === "/") {
-      
+    } else if (operadorSelecionado === "/") {   
      console.log( '',numero2 /= numero);
     }
+    
 
    let resutado=numero;
    console.log('O ultimo numero e:',numero3,operadorSelecionado,resutado);
@@ -98,10 +92,10 @@ if (igual) {
     numero = 0;
     cliques = 0;
     base = 0;
-    console.log('Número atual:', numero);
+    console.log('Número1 atual:', numero);
       console.log('Resultado:', numero);
       console.log('o numero 3 vale:', numero3);
-      console.log('OLAMUNDO');
-       
+      
+  
   });
 }
