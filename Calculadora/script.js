@@ -3,7 +3,6 @@ let numero = 0;
 let numero3 = 0;
 let numero2 = 0;
 let cliques = 0;
-let cont = 0;
 let operadorSelecionado = null;
 
 const idToNumber = {
@@ -45,12 +44,11 @@ Object.keys(idToNumber).forEach(id => {
   btn.addEventListener('click', () => {
     let valor = idToNumber[id];
 
-    // ✅ Correção: não inverte mais o número
+    // ✅ montagem correta do número
     numero = numero * 10 + valor;
-    
-    
-    document.getElementById("resutado2").innerText = numero; 
-});
+
+    document.getElementById("resutado2").innerText = numero;
+  });
 });
 
 // -------- BOTÕES DE OPERADORES --------
@@ -60,19 +58,21 @@ Object.keys(idToOperadores).forEach(id => {
 
   btn.addEventListener('click', () => {
 
-    // 🔁 Se já existe operador, calcula antes
     if (operadorSelecionado !== null) {
       calcular();
     } else {
       numero2 = numero;
-      
     }
+
+    // ✅ ZERA numero logo após transferir
+    numero = 0;
 
     operadorSelecionado = idToOperadores[id];
 
     document.getElementById("resutado").innerText = numero2;
     document.getElementById("resutado3").innerText = operadorSelecionado;
-    numero = 0;
+
+    numero3 = numero2;
   });
 });
 
@@ -86,15 +86,12 @@ if (igual) {
       calcular();
     }
 
-    console.log('Resultado:', numero2);
-
     document.getElementById("resutado").innerText = numero2;
 
-    // reset leve (permite continuar usando resultado)
+    // ✅ limpa numero após uso
     numero = 0;
     operadorSelecionado = null;
 
-    console.log('Número resetado:', numero);
     console.log('Resultado final:', numero2);
   });
 }
