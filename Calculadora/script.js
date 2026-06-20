@@ -3,6 +3,7 @@ let numero = 0;
 let numero3 = 0;
 let numero2 = 0;
 let cliques = 0;
+let cont = 0;
 let operadorSelecionado = null;
 
 const idToNumber = {
@@ -19,6 +20,23 @@ const idToOperadores = {
   divisao: "/"
 };
 
+// -------- FUNÇÃO DE CÁLCULO --------
+function calcular() {
+  if (operadorSelecionado === "+") {    
+    numero2 += numero;
+  } else if (operadorSelecionado === "-") {     
+    numero2 -= numero;
+  } else if (operadorSelecionado === "*") {      
+    numero2 *= numero;
+  } else if (operadorSelecionado === "/") {   
+    if (numero === 0) {
+      alert("Não pode dividir por zero");
+      return;
+    }
+    numero2 /= numero;
+  }
+}
+
 // -------- BOTÕES NUMÉRICOS --------
 Object.keys(idToNumber).forEach(id => {
   const btn = document.getElementById(id);
@@ -27,13 +45,12 @@ Object.keys(idToNumber).forEach(id => {
   btn.addEventListener('click', () => {
     let valor = idToNumber[id];
 
-    if (cliques < 4) {
-      cliques++;
-      base = cliques - 1;
-
-      numero += valor * 10 ** base;
-    }
-  });
+    // ✅ Correção: não inverte mais o número
+    numero = numero * 10 + valor;
+    
+    
+    document.getElementById("resutado2").innerText = numero; 
+});
 });
 
 // -------- BOTÕES DE OPERADORES --------
@@ -42,60 +59,42 @@ Object.keys(idToOperadores).forEach(id => {
   if (!btn) return;
 
   btn.addEventListener('click', () => {
+
+    // 🔁 Se já existe operador, calcula antes
+    if (operadorSelecionado !== null) {
+      calcular();
+    } else {
+      numero2 = numero;
+      
+    }
+
     operadorSelecionado = idToOperadores[id];
 
-    numero2 = numero;
-//document.getElementById("resutado4").innerText = numero2 ;
-
-    console.log('Resultado:', numero2);
-   let resutadoConta=numero2;
-   document.getElementById("resutado").innerText = resutadoConta;
-    numero3 = numero2;
+    document.getElementById("resutado").innerText = numero2;
+    document.getElementById("resutado3").innerText = operadorSelecionado;
     numero = 0;
-    cliques = 0;
-    base = 0;
-
-    console.log('Operador:', operadorSelecionado);
   });
 });
 
-// -------- BOTÃO DE RESULTADO (ex: "=") --------
+// -------- BOTÃO DE RESULTADO "=" --------
 const igual = document.getElementById("igual");
 
 if (igual) {
   igual.addEventListener('click', () => {
-    if (operadorSelecionado === "+") {    
-      numero2 += numero;
-    } else if (operadorSelecionado === "-") {     
-      numero2 -= numero;
-    } else if (operadorSelecionado === "*") {      
-      numero2 *= numero;
-    } else if (operadorSelecionado === "/") {   
-     console.log( '',numero2 /= numero);
+
+    if (operadorSelecionado !== null) {
+      calcular();
     }
-    
 
-   let resutado=numero;
-   console.log('O ultimo numero e:',numero3,operadorSelecionado,resutado);
+    console.log('Resultado:', numero2);
 
-   document.getElementById("resutado2").innerText = resutado ;
+    document.getElementById("resutado").innerText = numero2;
 
-   document.getElementById("resutado3").innerText = operadorSelecionado ;
-   alert("o valor de numero um e" + numero)
-
-   console.log('Resultado:', numero2);
-
-   let resutadoConta=numero2;
-   
-   document.getElementById("resutado").innerText = resutadoConta;
-    // reset
+    // reset leve (permite continuar usando resultado)
     numero = 0;
-    cliques = 0;
-    base = 0;
-    console.log('Número1 atual:', numero);
-      console.log('Resultado:', numero);
-      console.log('o numero 3 vale:', numero3);
-      
-  
+    operadorSelecionado = null;
+
+    console.log('Número resetado:', numero);
+    console.log('Resultado final:', numero2);
   });
 }
