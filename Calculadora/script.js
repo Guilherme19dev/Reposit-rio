@@ -1,90 +1,33 @@
-numero=0;
-const botoes = document.querySelectorAll(".um");
-var btn1 = document.getElementById('one');
-var btn2 = document.getElementById('two');
-var btn3 = document.getElementById('three');
-var btn4 = document.getElementById('four');
-var btn5 = document.getElementById('five');
-var btn6 = document.getElementById('six');
-var btn7 = document.getElementById('seven');
-var btn8 = document.getElementById('eight');
-var btn9 = document.getElementById('nine');
-var btn0 = document.getElementById('zero');
-botoes.addEventListener("click",(event)=> {
- if (true){
-    if(btn1){
-        document.getElementById('one').onClick=value=1;
-        alert('Button was clicked!:'+value);
-        numero=value;
-        alert(""+numero);
-        console.log("O numero é"+numero);
-     } else if (true){
-     } else if(btn2){
-            document.getElementById('two').onClick=value=2;
-            alert('Button was clicked!:'+value);
-            numero=value;
-            alert(""+numero);
-            console.log("O numero é"+numero);
-  } else if (true){
-   } else if(btn3){
-                document.getElementById('three').onClick=value=3;
-                alert('Button was clicked!:'+value);
-                numero=value;
-                alert(""+numero);
-                console.log("O numero é"+numero);
-                } else if (true){
-}else if(btn4) {
-                    document.getElementById('four').onClick=value=4;
-                    alert('Button was clicked!:'+value);
-                    numero=value;
-                    alert(""+numero);
-                    console.log("O numero é"+numero);
-                    } else if (true){
- }else if(btn5){
-                        document.getElementById('five').onClick=value=5;
-                        alert('Button was clicked!:'+value);
-                        numero=value;
-                        alert(""+numero);
-                        console.log("O numero é"+numero);
-                        } else if (true){
-}else if(btn6) {
-                            document.getElementById('six').onClick=value=6;
-                            alert('Button was clicked!:'+value);
-                            numero=value;
-                            alert(""+numero);
-                            console.log("O numero é"+numero);
-                            } else if (true){
-}else if (btn7) {
-                                document.getElementById('seven').onClick=value=7;
-                                alert('Button was clicked!:'+value);
-                                numero=value;
-                                alert(""+numero);
-                                console.log("O numero é"+numero);
-                           } else if (true){
-                            }else if(btn8) {
-                                    document.getElementById('eight').onClick=value=8;
-                                    alert('Button was clicked!:'+value);
-                                    numero=value;
-                                    alert(""+numero);
-                                    console.log("O numero é"+numero);
-                                    } else if (true){
-}else if(btn9) {
-                                        document.getElementById('nine').onClick=value=9;
-                                        alert('Button was clicked!:'+value);
-                                        numero=value;
-                                        alert(""+numero);
-                                        console.log("O numero é"+numero);
-}else{
-                                                document.getElementById('zero').onClick=value=0;
-                                                alert('Button was clicked!:'+value);
-                                                numero=value;
-                                                alert(""+value);                                               
-                                                console.log("O numero é"+numero);
- }
-//else{
-    //console.log("clique em um numero");
-//}
-//}
- }})
-value=numero;
-console.log((""+value));
+base=0;
+contador=0
+while(contador===5){
+const idToNumber = {
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+  six: 6,
+  seven: 7,
+  eight: 8,
+  nine: 9,
+  zero: 0
+};
+
+let numero = 0;
+Object.keys(idToNumber).forEach(id => {
+  const btn = document.getElementById(id);
+  if (!btn) return; // pula se não existir
+  btn.addEventListener('click', () => {
+    numero = idToNumber[id];
+    alert('Button was clicked!: ' + numero);
+    console.log('O número é ' + numero);
+    numero=numero*10**base;
+  });
+});
+   base++;
+   contador++;
+    }
+
+console.log('valor inicial:', numero);
+
