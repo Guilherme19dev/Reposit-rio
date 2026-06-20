@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+
+}
+body{
+width:100vw;
+height:100vh;
+overflow-y: hidden;
+overflow-x: hidden;
+
+
+}
+.card.display h2{
+    margin-top:0;
+    font-size:100pt;
+    color:white;
+}
+.bar{
+    margin-top:0;
+    width:100vw;
+    height:20vh;
+    background-color:rgba(0, 0, 0, 0.925) ;
+}
+.bar h1{
+color:white;
+font-size:80pt;
+text-align: center;
+margin-right: 10%;
+font-family: Arial;
+}
+#caixa-branca{
+    width:100vw;
+    height:100vh;
+    align-items: center;
+   background-color:rgb(29, 22, 22);
+}
+.slide{
+ opacity:0;
+ position:absolute;
+ background:linear-gradient(to bottom, rgba(4, 2, 12, 0.8), rgb(39, 45, 128));
+ width:70%;
+ height:40%;
+ gap: 14px;
+ border-radius: 5%;
+ margin-top: 7%;
+ margin-left: 17%;
+ transform:translatex(100vw);
+ transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+  
+}
+.activo{
+opacity:1;
+transform:translatex(0);
+
+}
+#imagem{
+    box-sizing:450px 300px;
+    text-align: left;
+    height:100%;
+     background:linear-gradient(to bottom, rgba(4, 2, 12, 0.8), rgba(163, 9, 9, 0.473));
+    box-shadow: 2px 4px 0 rgb(43, 5, 5);
+    border-radius: 5%;
+
+}
+#imagem .img{
+    width:60%;
+    height:100%;
+    border-radius: 5%;
+    margin-left: 0;
+    box-shadow: 5px 5px 0 black;
+
+} #legenda{
+    color: white;
+
+}
+#titulo{
+    color:rgb(199, 192, 169);
+}
+
+
+
+#button{
+position:absolute;
+height:100%;
+width: 100%;
+display:flex;
+margin-top: 30%;
+margin-left: 45%;
+margin-right: 50%;
+
+}
+.bot{
+    margin-left: 5px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+    height:10px;
+    width:50px;
+
+}
+.bot.activo{
+    background-color: rgb(99, 14, 14);
+    box-shadow: 1px 1px 0px rgba(241, 9, 79, 0.685);
+
+}
+#Flecha {
+  position:relative;  
+  
+}
+
+#Flecha .icone-seta{
+    height:35%;
+    width:30%;
+    position: absolute;
+    margin-top: 35%;
+    margin-left: 30%;
+    cursor: pointer;
+    z-index: 5;
+
+}
+
+
+
+
+.After{
+    width:50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color:rgb(199, 5, 5);
+    margin-top: 17%;
+    position:absolute;
+    margin-left:90%;
+}
+.After:hover{
+     background-color: rgb(238, 53, 20);
+}
+
+.Before{
+    width:50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgb(199, 5, 5);
+    margin-top: 17%;
+    position:absolute;
+    margin-left:10%;
+}
+.Before:hover{
+     background-color: rgb(238, 53, 20);
+}

@@ -1,0 +1,78 @@
+*{
+    overflow-x:hidden;
+}
+#container{
+    width:100vw;
+    height:100vh;
+    background-color: rgb(23, 20, 47);
+}#button{
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    margin-left:5vw;
+    height:10vh;
+    width:7vw;
+    border-radius: 50%;
+    background-color: rgba(113, 131, 113, 0.327);
+}
+#button2{
+    cursor: pointer;
+     overflow: hidden;
+    position: absolute;
+    margin-left:85%;
+    height:10vh;
+    width:7vw;
+    border-radius: 50%;
+    background-color: rgba(113, 131, 113, 0.327);
+   
+}
+#bottoes{
+    margin-top:45vh; 
+    
+    
+}#button i{
+    position: absolute;
+    margin-left:2.8vw;
+    margin-top: 3.6vh;
+    width:100%;
+    height:100%;
+}
+#button2 i{
+    position: absolute;
+    margin-left:2.8vw;
+    margin-top: 3.6vh;
+    width:100%;
+    height:100%;
+}
+
+
+.slide{
+    overflow-y: hidden;
+    border-radius: 10px;
+    position:absolute;
+    margin-left:22vw;
+    margin-top:25vh;
+    width:50vw;
+    height:50vh;
+}#cartao{
+    overflow-y: hidden;
+}
+#cartão img{
+    width:100%;
+    height:100%;
+    
+}
+#cartão2 img{
+    width:100%;
+    height:100%;
+}
+#cartão3 img{
+    width:100%;
+    height:100%;
+}
+
+
+
+.aparecendo{
+    z-index: 5;
+}
