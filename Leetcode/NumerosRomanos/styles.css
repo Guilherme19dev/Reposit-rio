@@ -1,0 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body{
+     background-image: url("gladiadores.png");
+    background-size: cover;
+   margin:0;
+}
+#box{
+   
+    height:100dvh;
+    width:100vw;
+    margin:0;
+    background-color:rgba(201, 162, 91, 0.473);
+}
+#caixa{
+    position:absolute;
+    height:100dvh;
+    width:40vw;
+    margin-left:30vw;
+    background-color: rgba(219, 163, 60, 0.623);
+    box-shadow: 0px 0 20px black;
+}h1{
+    text-align: center;
+    font-size: 3em;
+    font-family: "Playfair" sans-serif;
+     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.719);
+     color: rgba(253, 253, 253, 0.795);
+}
+input{
+    margin-top:7vh;
+    width:30vw;
+    margin-left:5vw;
+    height:5vh;
+    border-radius:5px;
+     color: rgb(14, 13, 13);
+    font-weight: bold;
+    font-size: 1.25em;
+    font-family: 'Times New Roman', Times, serif;
+}
+input:focus{
+    box-shadow: 0 0 20px yellow;
+}
+#acionar{
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    height:7vh;
+    width:30vw;
+    margin-left:5vw;
+    margin-top: 7vh;
+    border-radius: 10px;
+    background-color: rgba(7, 41, 80, 0.89);
+    border:solid rgb(226, 192, 43);
+}
+#acionar:focus{
+     background-color: rgba(26, 118, 223, 0.89);
+}
