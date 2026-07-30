@@ -1,0 +1,187 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    overflow-x: hidden;
+}body{
+    display:flex;
+    flex-direction: column;
+    width:100vw;
+}
+ #barra-de-pesquisa{
+    position: fixed;
+    z-index: 10;
+    width:100vw;
+    height:10vh;
+    padding-right: 20px;
+    background-color:rgb(131, 11, 11);
+    display: flex;
+    align-items:center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.466);
+    justify-content: center;
+ }
+ #barra-de-pesquisa i{
+  
+   height:55%;
+   width:3.5%;
+   overflow: hidden;
+   min-width: 50px;
+   padding: .7% .0rem .9% 1rem;
+   border-radius: 5px;
+   margin-left:2px;
+   cursor: pointer;
+   font-size: 20px;
+   background-color: pink;
+
+ }
+ input{
+    border-radius:5px;
+    width:80%;
+    height:60%;
+    margin-left:20px;
+    padding:1px 0 1px 10px;
+    cursor: pointer;
+    justify-content:center;
+
+ }#menu-lateral{
+    position:fixed;
+    display: flex;
+    flex-direction:column;
+    height:100vh;
+    width:6vw;
+    min-width:55px;
+    color:transparent;
+    background:linear-gradient(to right,rgb(184, 126, 18),rgb(189, 189, 9),rgb(218, 218, 11));
+    font-size: .7rem;
+    z-index:9;
+    transition: .7s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.466);
+ }
+ #menu-lateral:hover{
+    width:30vw;
+   font-size: 1.3rem;
+   font-family: "Roboto", sans-serif;
+   justify-content: start;
+    transition: .7s;
+    color:rgb(247, 242, 242);
+    
+ }
+ #menu-lateral p{
+    margin-top:0vh;
+    margin-left:1vw;
+    overflow-y: hidden;
+    font-family: "Archivo Black", sans-serif;
+   
+    
+ }#menu-lateral #menu{
+    margin-top:11vh;
+    overflow-y: hidden;
+    font-size: 2.3rem;
+    color:rgb(247, 242, 242);
+ }
+ #menu-lateral i{
+    margin-top:2vh;
+    display: flex;
+    padding-left:1.5vw;
+    justify-content: start;
+    overflow-y: hidden;
+    font-size: 2.3rem;
+    color:rgb(247, 242, 242);
+ }
+ 
+ #carrossel{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    margin-top: 20vh;
+    height:50vh;
+    width:100vw;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(8, 63, 8, 0.829);
+
+ }.caixa{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 200vw;
+    transition:2s;
+    height:80%;
+    width:50%;
+    min-width: 400px;
+    border-radius: 10px;
+    
+ }#caixa1{
+   background-color: rgb(143, 143, 11);
+ }
+ #caixa2{
+  background-color: rgb(143, 59, 11);
+ }
+ #caixa3{
+   background-color: rgb(59, 143, 11);
+ }.display{
+   margin-left: 0px;
+  transition:2s;
+ }
+ #bottoes{
+    width:100vw;
+    height:25px;
+    margin-bottom:7%;
+   
+
+ }#bottoes i{
+   font-size:1.7rem;
+   font-weight: bold;
+ }
+ #left{
+    position: absolute;
+    border-radius: 5px;
+    width:10vw;
+    height:8vh;
+    margin-left:8%;
+    z-index: 5;
+    
+ }
+ #right{
+    position: absolute;
+    border-radius: 5px;
+    width:10vw;
+    height:8vh;
+    margin-left:85%;
+ }#ofertas{
+   display:flex;
+    margin-top: 10vh;
+    margin-bottom:10vh;
+    min-height:40vh;
+    width:100%;
+    margin-left: 20px;
+    padding-left:6vw;
+    background-color: rgb(65, 5, 121);
+ }.cartao{
+    height:35vh;
+    width:30vw;
+    min-width:100px ;
+    margin-top: 2.5vh;
+    margin-left:0px;
+    border-radius:5px;
+    border:solid 1px black ;
+ }
+ #banner1{
+   height:100%;
+   width:100%;
+   background-color: rgba(117, 105, 105, 0.664);
+ }
+ #banner2{
+   height:100%;
+   width:100%;
+   background-color:rgb(117, 105, 105,0.664);
+ }
+ #banner3{
+   height:100%;
+   width:100%;
+   background-color:rgb(117, 105, 105,0.664);
+ }
+ .fadeout{
+   opacity:0;
+   transition:3s;
+ }

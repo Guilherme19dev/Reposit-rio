@@ -7,6 +7,7 @@ buttons.addEventListener("click",function(){
     let resultado=document.querySelector("#final")
     resposta=resposta.value.toString()
     resposta2=resposta2.value.toString()
+    
 class node{
     constructor(data){
         this.data = data;

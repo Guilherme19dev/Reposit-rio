@@ -1,0 +1,25 @@
+[{
+    "imagem":"https://sportbras.vtexassets.com/arquivos/ids/1225803-800-auto?v=638664165319800000&width=800&height=auto&aspect=true",
+    "imagensSecundarias":["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8MiQS1hfll8dQGB9B7IE4CP5gTJGQc8zJMcmKwX9ecg&s=10"
+     ,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcRSqSQnekQ5zbyMv7yNdAHnP_TwrJgn4ZrFi2sC__2w&s=10"
+      ,"https://static.netshoes.com.br/produtos/camisa-manchester-united-2526-comemorativa-adidas-masculina/14/FBA-3628-014/FBA-3628-014_zoom1.jpg?ts=1783046291&ims=544x"],
+    "titulo":"Camisa do Manchester United",
+    "descricao":"Camisa do time de futebol de manchester com tecido de alta qualidade"
+},
+{
+    "imagem":"https://images.tcdn.com.br/img/img_prod/1445347/camisa_arsenal_adidas_2324_uniforme_1_masculino_1_20260220132024_2a48285992ae.jpg",
+    "imagensSecundarias":["https://static.netshoes.com.br/produtos/camisa-arsenal-third-2526-sn-torcedor-adidas-masculino/14/FBA-7883-014/FBA-7883-014_zoom1.jpg?ts=1780453254"
+    ,"https://gssportspe.com.br/cdn/shop/products/ca146152_1024x1024@2x.jpg?v=1626143264" 
+    ,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUXKc8JHYRxUdQwBVs26Pg9eb47CDHKOvrniic2WkQsA&s=10"],
+    "titulo":"Camisa do Arsenal",
+    "descricao":"Camisa do time de futebol Arsenal diretamente da Alemanha com tecido de alta qualidade"
+},
+{
+    "imagem":"https://images.tcdn.com.br/img/img_prod/740190/camisa_retro_chelsea_2008_843_1_c883a41bfbf66d54d184c62c8f431bb9.jpg",
+    "imagensSecundarias":["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrOv8IgMLun8fYg76RMG5_clGLfu8ItZAZNY6c0lqPcg&s=10" 
+    ,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKdq9h3QkCWqcDMNqpWXlBCd4-z2qQiLQ8Rj_JTHb9iA&s=10" 
+    ,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFGrROh_q093310_pptL9mDFb9qh2QYNqkyblk2ntl6g&s=10"],
+    "titulo":"Camisa do Chelsea",
+    "descricao":"Camisa do time de futebol do Chelsea time da primeira divisão francesa campeão da champions league 25 com tecido de alta qualidade"
+}
+]
