@@ -6,6 +6,7 @@
     box-sizing: border-box;
     
 }body{
+    background-color: rgb(185, 185, 192);
     overflow-x: hidden;
     overflow-y:auto;
     height: 100vh;
@@ -15,7 +16,8 @@
     width:100vw;
     height:10vh;
     position:fixed;
-    background-color:rgb(189, 19, 19);
+    background-color:rgb(12, 13, 41);
+    border-bottom: 2px solid white;
     z-index:10;
     padding-right: 7vw;
     display: flex;
@@ -28,6 +30,7 @@ input{
     height:60%;
     margin-left:50px;
     font-size: 1rem;
+    font-weight: bold;
     border-radius:5px;
     padding-left:10px;
     cursor: pointer;
@@ -37,9 +40,11 @@ input{
      width:3.5%;
      min-width: 50px;
      border-radius:5px;
-     background-color:pink;
+     background-color:rgb(187, 32, 58);
+     color:rgb(241, 234, 234);
      cursor:pointer;
      outline: none;
+     font-size: 1rem;
      border:solid transparent;
      margin-left:.4%;
 }#menu-lateral{
@@ -54,7 +59,7 @@ input{
     transition: .7s;
     color:transparent;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.466);
-    background:linear-gradient(to right,rgb(184, 126, 18),rgb(189, 189, 9),rgb(218, 218, 11));
+    background:linear-gradient(to right,rgb(27, 31, 26),rgb(13, 15, 12),rgb(2, 2, 2));
 }#menu-lateral:hover{
     width:30vw;
     transition: .7s;
@@ -81,13 +86,22 @@ input{
     position:relative;
     display:flex;
     flex-direction: column;
-    height:50vh;
+    height:70vh;
     width:100vw;
     align-items: center;
     justify-content: center;
-    background-color: rgba(8, 63, 8, 0.829);
+    background-color: rgba(16, 134, 155, 0.87);
+    border-bottom: solid 2px rgb(255, 254, 254);
+    border-top: solid 2px rgba(255, 254, 254, 0.993);
+    
 
- }.caixa{
+ }#carrossel #atleta{
+    opacity: 0.4;
+    height:100%;
+    width:100%;
+    position: absolute;
+ }
+ .caixa{
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -97,17 +111,18 @@ input{
     width:50%;
     min-width: 400px;
     border-radius: 10px;
+     border:solid .5px rgba(16, 94, 87, 0.671) ;
     
  }#caixa1{
-   background-color: rgb(143, 143, 11);
+   background-color: rgb(114, 114, 99);
  }
  #caixa2{
-  background-color: rgb(143, 59, 11);
+  background-color: rgb(100, 91, 86);
  }
  #caixa3{
-   background-color: rgb(59, 143, 11);
+   background-color: rgb(121, 143, 108);
  }.display{
-   margin-left: 0px;
+   margin-left: 8vh;
   transition:2s;
  }
  #bottoes{
@@ -117,33 +132,42 @@ input{
    
 
  }#bottoes i{
-   font-size:1.7rem;
-   font-weight: bold;
+   font-size:2.3rem;
+   color:white;
+   opacity: .9;
  }
  #left{
     position: absolute;
     border-radius: 5px;
+    background-color: rgba(55, 187, 15, 0.836);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.466);
+    border:none;
     width:10vw;
     height:8vh;
-    margin-left:8%;
+    margin-left:10%;
     z-index: 5;
     
  }
  #right{
     position: absolute;
     border-radius: 5px;
+    background-color: rgba(55, 187, 15, 0.836);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.466);
+    border:none;
     width:10vw;
     height:8vh;
     margin-left:85%;
  }#ofertas{
    display:flex;
-    margin-top: 10vh;
+    margin-top: 15vh;
     margin-bottom:10vh;
     min-height:40vh;
     width:100%;
     margin-left: 20px;
     padding-left:6vw;
-    background-color: rgb(65, 5, 121);
+    background-color: rgb(104, 8, 177);
+    border-bottom: solid 2px rgb(255, 254, 254);
+    border-top: solid 2px rgba(255, 254, 254, 0.993);
  }.cartao{
     height:35vh;
     width:30vw;
