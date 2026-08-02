@@ -117,32 +117,49 @@ function clickIconeHome(){
             PaginaInicial()
     })
 }
+function enter(){
+    const search = document.querySelector("#search")
+        document.addEventListener("keydown",function(e){
+            if(e.target===search){
+                if(e.key==='Enter'){
+                    acaoDePesquisar(search)
+                }
+            }
+        })
+}
+
+function prepararPagina(){
+    let paginaProdutos = document.querySelector("#container-de-produtos")
+        let paginaInicial = document.querySelector("#container")
+            let homePage = document.querySelector("#pagina-inicial")
+    paginaProdutos.classList.add("hide");
+        paginaInicial.classList.remove("hide");
+            homePage.classList.add("hide")
+}
+
+function acaoDePesquisar(search){
+    let tituloDaPagina = document.querySelector('#titulo-do-produto h1')
+        let titles = document.querySelectorAll(".titulo")
+            prepararPagina()
+    tituloDaPagina.innerHTML=search.value
+        titles.forEach(title =>{
+            const elEscondido = title.parentElement.parentElement
+                elEscondido.style.display="flex";
+                    if(title.innerText.toLowerCase().includes(search.value.toLowerCase().trim())){
+                        elEscondido.style.display="flex";
+                    }else{
+                        const elEscondido = title.parentElement.parentElement
+                            elEscondido.style.display="none";
+        
+                        }
+        })
+}
 
 function pesquisar(){
     const search = document.querySelector("#search")
-        const button = document.querySelector("#bot")
-            let tituloDaPagina = document.querySelector('#titulo-do-produto h1')
-                let paginaProdutos = document.querySelector("#container-de-produtos")
-                    let paginaInicial = document.querySelector("#container")
-                        let homePage = document.querySelector("#pagina-inicial")
-                            let titles = document.querySelectorAll(".titulo")
-                                let botoesDeCompra = document.querySelectorAll(".comprar")
+        const button = document.querySelector("#bot")      
         button.addEventListener("click",function(){
-                paginaProdutos.classList.add("hide");
-                    paginaInicial.classList.remove("hide");
-                        homePage.classList.add("hide")
-            tituloDaPagina.innerHTML=search.value
-                            titles.forEach(title =>{
-                                const elEscondido = title.parentElement.parentElement
-                                    elEscondido.style.display="flex";
-                                        if(title.innerText.toLowerCase().includes(search.value.toLowerCase().trim())){
-                                            elEscondido.style.display="flex";
-                                        }else{
-                                            const elEscondido = title.parentElement.parentElement
-                                                elEscondido.style.display="none";
-                            
-                                            }
-                            })
+             acaoDePesquisar(search)  
         }) 
 }
 
@@ -157,6 +174,7 @@ async function chamarBancoDeProdutos(){
                             clickTxtHome()
                                 clickIconeHome()
                                     pesquisar()
+                                    enter()
                                      
 }catch{
         console.error("error")
